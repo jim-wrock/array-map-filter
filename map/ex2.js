@@ -1,3 +1,5 @@
+'use strict';
+
 /* Array.prototype.map - Exercice 2
 
 Ecrire une fonction getFoodCategories qui reçoit comme un argument un tableau
@@ -42,9 +44,45 @@ En sortie: [
 
  */
 
-function getFoodCategories(foods) {
+let nourriture = [
+  {
+    food: 'Bacon',
+    isVegetarian: false
+  },
+  {
+    food: 'Sausage',
+    isVegetarian: false
+  },
+  {
+    food: 'Tofu',
+    isVegetarian: true
+  },
+  {
+    food: 'Chick Pea',
+    isVegetarian: true
+  }
+];
+
+
+//ES5
+function funk(element){
+  if (element.isVegetarian === true) {
+    return element.food + " is suitable for vegetarians";
+  } else {
+    return element.food + " is not suitable for vegetarians";
+  }
 }
 
+function getFoodCategories(foods) {
+  return foods.map(funk)
+}
+
+
+// ES6
+// function getFoodCategories(foods) {
+//   return foods.map(element => { return element.isVegetarian === true? element.food + " is suitable for vegetarians":element.food + " is not suitable for vegetarians";})}
+
+console.log(getFoodCategories(nourriture))
 
 
 // Ne pas modifier l'export

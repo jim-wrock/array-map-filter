@@ -19,17 +19,16 @@ En sortie: [
   'Mayonnaise contains 10 characters'
 ]
 
- */
+*/
 
-function getStringsLength(stringArray) {
+ function getStringsLength(stringArray) {
     let stringArray2 = stringArray.map(function(string) {
-      let length = string
-      .length;
+      let length = string.length;
       return  string + " contains " + length + " characters";
 });
 return stringArray2;
 }
-console.log(getStringsLength(['Cat', 'Lion', 'Tiger', 'Jaguar', 'Leopard']));
+// console.log(getStringsLength(['Cat', 'Lion', 'Tiger', 'Jaguar', 'Leopard']));
 
 
 
