@@ -35,6 +35,8 @@ function multiplyOddIndices(numbers) {
     } else {
       return number * index;
     }
+
+    // ES6
     // return index % 2 == 0 ? number : number * index ;
   });
 }
