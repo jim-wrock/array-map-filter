@@ -16,8 +16,8 @@ function funk(num) {
   if (num >= 0) {return num;} 
 }
 
-// ES6
-funkES6 = word => word >= 0;
+// // ES6
+// funkES6 = word => word >= 0;
 
 function getPositiveNumbers(array1) {
   return(array1.filter(word => word >= 0));
