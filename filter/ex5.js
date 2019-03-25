@@ -37,8 +37,11 @@ Exemple d'entrée:
 
 
  */
+'use strict' 
 
 function searchWordFilter(items, search) {
+  let funk = items.filter(funk => funk.toLowerCase().includes(search));
+  return funk;
 }
 
 // Ne pas modifier l'export

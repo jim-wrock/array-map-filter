@@ -19,5 +19,8 @@
     "reporters": [
       "jest-check-cross-reporter"
     ]
+  },
+  "dependencies": {
+    "chalk": "^2.4.2"
   }
 }

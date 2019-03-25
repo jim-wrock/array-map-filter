@@ -25,9 +25,19 @@ Sortie attendue:
 ]
 
 */
-
 function filterOffensiveComments(comments, bannedWords) {
-}
+  return comments.filter(arrItem => {
+  let check = true;
+  for (let i = 0; i < bannedWords.length; i++) {
+  arrItem.toLowerCase().includes(bannedWords[i]) ? check = check * false : check *= true;
+  }
+  return check;
+  });
+  }
+
+// function filterOffensiveComments(comments, bannedWords) {
+//   return comments.filter(funk => funk.toLowerCase().includes(bannedWords.map(x=>x)));
+// }
 
 // Ne pas modifier l'export
 module.exports = filterOffensiveComments;

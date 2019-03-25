@@ -14,9 +14,12 @@ Exemple d'entrée:
   [-10, 5, 15, 20]
 
  */
+'use strict';
 
 function getMultiplesOf(numbers, n) {
-}
+  return(numbers.filter(num => num % n === 0));
+    }
+
 
 // Ne pas modifier l'export
 module.exports = getMultiplesOf;

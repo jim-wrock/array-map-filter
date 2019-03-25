@@ -22,9 +22,26 @@ Sortie attendue:
   ['Bran Stark', 'Arya Stark', 'Sansa Stark']
 
  */
+'use strict';
+
+//----------long version without filter
+
+// function keepStarks(array) {
+//   let newArray = [];
+//   for (let i = 0; i < array.length; i++) {
+//     if (array[i].endsWith('Stark')) {
+//     newArray.push(array[i]);
+//     }
+//   }
+//   return newArray;
+// }
+
+// ----------ES6 version
 
 function keepStarks(names) {
+  return(names.filter(array => array.endsWith('Stark') ));
 }
+
 
 // Ne pas modifier l'export
 module.exports = keepStarks;

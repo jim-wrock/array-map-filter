@@ -21,8 +21,22 @@ Sortie attendue:
 ['Yoda', 'Obiwan Kenobi', 'Mace Windu']
 
 */
+'use strict';
 
 function getJedisNames(characters) {
+  return characters.filter(object => object.side === 'light').map(object => object.name);
+
 }
+
+const testArray = [
+  { name: 'Yoda', side: 'light' },
+  { name: 'Count Dooku', side: 'dark' },
+  { name: 'Obiwan Kenobi', side: 'light' },
+  { name: 'Mace Windu', side: 'light' },
+  { name: 'Darth Sidious', side: 'dark' },
+  { name: 'Darth Maul', side: 'dark' }
+];
+
+console.log(getJedisNames(testArray));
 
 module.exports = getJedisNames;
